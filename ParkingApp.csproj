@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{618445B8-376C-4C17-8976-D80617596240}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParkingApp</RootNamespace>
+    <AssemblyName>ParkingApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="View\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdmNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdmNew.Designer.cs">
+      <DependentUpon>AdmNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdmUsers.Designer.cs">
+      <DependentUpon>AdmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BaseProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BaseProgram.Designer.cs">
+      <DependentUpon>BaseProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cash.Designer.cs">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Closing.cs" />
+    <Compile Include="View\Closings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Closings.Designer.cs">
+      <DependentUpon>Closings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Garage.cs" />
+    <Compile Include="Models\ListActivity.cs" />
+    <Compile Include="Models\ListClosing.cs" />
+    <Compile Include="Models\ListQuestions.cs" />
+    <Compile Include="Models\ListRental.cs" />
+    <Compile Include="Models\ListUser.cs" />
+    <Compile Include="View\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifyUser.Designer.cs">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewRental.Designer.cs">
+      <DependentUpon>NewRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parking.cs" />
+    <Compile Include="View\PasswordRecover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PasswordRecover.Designer.cs">
+      <DependentUpon>PasswordRecover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="Rental.cs" />
+    <Compile Include="RentalHour.cs" />
+    <Compile Include="View\RentalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RentalInfo.Designer.cs">
+      <DependentUpon>RentalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RentalMonthly.cs" />
+    <Compile Include="TypeVehicle.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="XML\XMLManagerActivity.cs" />
+    <Compile Include="XML\XMLManagerClosing.cs" />
+    <Compile Include="XML\XMLManagerQuestion.cs" />
+    <Compile Include="XML\XMLManagerRental.cs" />
+    <Compile Include="XML\XMLManagerUser.cs" />
+    <EmbeddedResource Include="View\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdmNew.resx">
+      <DependentUpon>AdmNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AdmUsers.resx">
+      <DependentUpon>AdmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BaseProgram.resx">
+      <DependentUpon>BaseProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cash.resx">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Closings.resx">
+      <DependentUpon>Closings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifyUser.resx">
+      <DependentUpon>ModifyUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewRental.resx">
+      <DependentUpon>NewRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PasswordRecover.resx">
+      <DependentUpon>PasswordRecover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\RentalInfo.resx">
+      <DependentUpon>RentalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\ListQuestions.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParkingAppBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Free2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParkingAppBackground1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
